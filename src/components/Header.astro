@@ -1,0 +1,64 @@
+---
+import './src/styles/global.css'
+
+const navItems = [
+    {
+        title: "Experiencia",
+        label: "experience",
+        url: "/#experience",
+    },
+    {
+        title: "Proyectos",
+        label: "projects",
+        url: "/#projects",
+    },
+    {
+        title: "Sobre mí",
+        label: "about-me",
+        url: "/#about-me",
+    },
+    {
+        title: "Contacto",
+        label: "contact",
+        url: "mailto:miduga@gmail.com",
+    },
+]
+---
+
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
+        {
+            navItems.map((link) => (
+            <a class="relative block px-2 py-2 transition hover:text-[#c441f6] dark:hover:text-[#c441f6]" aria-label={link.label} href={link.url}>
+                {link.title}
+            </a>
+            ))
+        }
+    </nav>
+</header>
+
+<style>
+        nav {
+            animation: nav-shadown 1s linear both;
+            animation-timeline: scroll();
+            animation-range: 0 100px;
+        }
+    
+        nav {
+            background-color: rgba(34, 43, 57, 0.5);
+            color: white;
+        }
+    
+        @keyframes nav-shadown {
+            0% {
+                background-color: rgba(34, 43, 57, 0);
+            }
+            to {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                            0 4px 6px -4px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+</style>

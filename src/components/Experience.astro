@@ -1,0 +1,24 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Septiembre 2024',
+        title: 'Desarrollador Full Stack',
+        company: 'RootHeim Company',
+        description: 'Colaboré durante 4 meses en el desarrollo de AquaControl, una solución integral para el monitoreo y control de los pagos y deudas de los derecho-habientes del servicio de agua potable en diversas localidades del Estado de México. Originalmente fue concebida para una sola localidad, pero me encargué de rediseñar y adaptar todo el sistema para que pudiera operar de forma genérica en múltiples localidades.',
+        link: 'https://rootheim.com/',
+    },
+]
+---
+
+<ol class="relative mt-16">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience } />
+            </li>
+        ))
+    }               
+</ol>
+
