@@ -1,5 +1,6 @@
 ---
 import LaravelIcon  from "../components/icons/Laravel.astro";
+import AstroIcon from "../components/icons/AstroIcon.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Link from "../components/icons/Link.astro";
@@ -9,6 +10,11 @@ const TAGS = {
         name: "Laravel",
         class: "bg-white/5 text-white",
         icon: LaravelIcon,
+    },
+    ASTRO : {
+        name: "Astro",
+        class: "bg-white/5 text-white",
+        icon: AstroIcon,
     },
 }
 
@@ -21,6 +27,14 @@ const PROJECTS = [
         github: "https://github.com/temolzin/AquaGeneric",
         image: "/projects/aquaControl.webp",
         tags: [TAGS.LARAVEL],
+    },
+    {
+        title: "Flowers",
+        description: "Creado con Astro, Flowers es el diseño de descripción de un producto ficticio, una floristería que ofrece una amplia variedad de flores y arreglos florales. Fue parte de un proyecto escolar.",
+        link: "https://flower-shop-kappa-blush.vercel.app/",
+        github: "https://github.com/josejulianmtnez/flower-shop",
+        image: "/projects/flowers.webp",
+        tags: [TAGS.ASTRO],
     },
 ]
 ---
